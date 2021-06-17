@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <div class="container">
+        <div>
+            <h2>Add new post</h2>
+            <form action="/post/new" method="post">
+                <div class="form-group">
+                    <label for="post-name">Title</label>
+                    <input class="form-control" id="post-name" name="title" required/>
+                </div>
+                <div class="form-group">
+                    <label for="post-current_city">City</label>
+                    <input class="form-control" id="post-current_city" name="city" required/>
+                </div>
+                <div class="form-group">
+                    <label for="post-description">Description</label>
+                    <input class="form-control" id="post-description" name="description" required/>
+                </div>
+                <div class="form-group">
+                    <label for="post-imgUrl">Image Url</label>
+                    <input class="form-control" id="post-imgUrl" name="imgUrl" required/>
+                </div>
+                <div class="form-group">
+                    <label for="post-publishedDate">Published Date</label>
+                    <input class="form-control" id="post-publishedDate" name="publishedDate" required/>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Post</button>
+                <a class="btn btn-default" href="/">Cancel</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
